@@ -605,8 +605,11 @@ button, input, select, textarea { font: inherit; color: inherit; }
 .footer-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line-dark); font-size: .88rem; color: #c4c5e2; }
 .footer-base p { margin: 0; }
 @media (max-width: 860px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
-@media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
-
+@media (max-width: 520px) {
+  /* Brand and Reach us span full width; Explore and Business sit side by side */
+  .footer-grid { grid-template-columns: 1fr 1fr; column-gap: 24px; row-gap: 36px; }
+  .footer-brand, .footer-grid > div:last-child { grid-column: 1 / -1; }
+}
 /* Find us — store type feature (shown while the store list is empty) */
 .store-feature .store-group-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(28px, 5vw, 72px); align-items: center; }
 .store-feature .store-group-intro img { margin: 0; aspect-ratio: 4 / 3; }
