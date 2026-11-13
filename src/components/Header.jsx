@@ -8,7 +8,6 @@ export const NAV = [
   { to: '/find-us', label: 'Find us' },
   { to: '/work-with-us', label: 'Work with us' },
   { to: '/what-we-do', label: 'What we do' },
-  { to: '/contact', label: 'Contact us' },
 ]
 
 export default function Header() {

@@ -24,19 +24,17 @@ const LOOK = [
 ]
 
 const PROCESS = [
-  ['Application', 'You send the form'],
   ['First response', 'Within five working days'],
   ['Site assessment', 'We visit and assess'],
   ['Terms', 'Written offer, one document'],
-  ['Fit out', ''],
-  ['Training', 'Before opening'],
-  ['Opening', 'Supported by our team'],
+  ['Fit out', 'Prepare and equip the space before opening.'],
+  ['Launch', 'Begin operations with support from our team.'],
 ]
 
 const PARTNERS = [
   {
     icon: Factory, t: 'Suppliers',
-    d: ['If you produce food, household goods, personal care or health products, our stores and our independent shop network are volume you can plan around.', 'Our grocery range is sourced through a vetted agricultural supply network, which keeps the chain between farm and shelf short and the quality traceable.'],
+    d: ['If you produce food, household goods, personal care or health products, our stores and our independent shop network are volume you can plan around. Our grocery range is sourced through a vetted agricultural supply network, which keeps the chain between farm and shelf short and the quality traceable.'],
     pts: ['Volume across every format we operate', 'Supplier development fund for capacity building', 'Payment terms agreed in writing and kept'],
   },
   {
@@ -47,7 +45,7 @@ const PARTNERS = [
   {
     icon: Landmark, t: 'Banks and financial institutions',
     d: ['Our stock supply scheme is a lending book with real inventory behind it and repayment tied to daily trading. Our stores are also a physical distribution network for cards, terminals and agency banking.'],
-    pts: ['Stock finance for vetted independent shop owners', 'Point of sale and agency banking footprint', 'Card issuing and payment infrastructure', 'Customer acquisition at the counter'],
+    pts: ['Stock finance for vetted independent shop owners', 'Point of sale and agency banking footprint', 'Card issuing and payment infrastructure'],
   },
   {
     icon: HandCoins, t: 'Capital partners',

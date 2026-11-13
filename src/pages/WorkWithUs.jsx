@@ -1,5 +1,20 @@
 import { NavLink, Outlet } from 'react-router-dom'
-import { ShoppingBasket, Handshake } from 'lucide-react'
+import { ShoppingBasket, Handshake, Check } from 'lucide-react'
+
+const CHOICES = [
+  {
+    to: '/work-with-us/stock-up-your-shop',
+    icon: ShoppingBasket,
+    title: 'Stock up your shop',
+    sub: 'For independent shop owners',
+  },
+  {
+    to: '/work-with-us/franchise-and-partners',
+    icon: Handshake,
+    title: 'Find a franchise and partner with us',
+    sub: 'Franchise holders, suppliers, brands, banks and capital',
+  },
+]
 
 export default function WorkWithUs() {
   return (
@@ -10,21 +25,25 @@ export default function WorkWithUs() {
           <h1 className="display">Stock your shop, run a franchise, or partner with the network.</h1>
         </div>
         <div className="wrap">
-          <nav className="wwu-switch" aria-label="Work with us">
-            <NavLink to="/work-with-us/stock-up-your-shop">
-              <ShoppingBasket size={22} aria-hidden />
-              <span>
-                <strong>Stock up your shop</strong>
-                <small>For independent shop owners</small>
-              </span>
-            </NavLink>
-            <NavLink to="/work-with-us/franchise-and-partners">
-              <Handshake size={22} aria-hidden />
-              <span>
-                <strong>Find a franchise and partner with us</strong>
-                <small>Franchise holders, suppliers, brands, banks and capital</small>
-              </span>
-            </NavLink>
+          <p className="wwu-choose" id="wwu-choose">Choose what you are here for</p>
+          <nav className="wwu-cards" aria-labelledby="wwu-choose">
+            {CHOICES.map(({ to, icon: Icon, title, sub }) => (
+              <NavLink key={to} to={to} className="wwu-card">
+                {({ isActive }) => (
+                  <>
+                    <span className="wwu-icon"><Icon size={24} aria-hidden /></span>
+                    <span className="wwu-body">
+                      <strong>{title}</strong>
+                      <small>{sub}</small>
+                      <span className="wwu-btn">
+                        {isActive && <Check size={16} aria-hidden />} Learn more
+                      </span>
+                    </span>
+                    <span className="wwu-radio" aria-hidden />
+                  </>
+                )}
+              </NavLink>
+            ))}
           </nav>
         </div>
       </section>

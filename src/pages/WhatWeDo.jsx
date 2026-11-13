@@ -163,11 +163,11 @@ export default function WhatWeDo() {
                 <div><dt>Pairs with</dt><dd>Supermarket</dd></div>
               </dl>
               <div className="pharmacy-range">
-                <h4>Jasmine oral care</h4>
+                <h4>All Hours Pharmacy products</h4>
                 <ul>
-                  <li>All Hours Jasmine Sensitive toothpaste</li>
-                  <li>All Hours Jasmine All Fresh</li>
-                  <li>All Hours Jasmine Triple Guard Whitening, Gum protection &amp; Pro Guard</li>
+                  <li>Jasmine toothpaste</li>
+                  <li>Daily supplements</li>
+                  <li>Protection cup and pads</li>
                 </ul>
                 <p className="small-note">Manufactured by design: All Hours Pharmacy Limited, Agbara Industrial Estate, Agbara Lagos.</p>
               </div>
